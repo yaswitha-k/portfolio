@@ -7,9 +7,11 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-8">
         {/* Profile Photo */}
         <img
-          src="public/cognizant.jpg"
+          src="/cognizant.jpg"
           alt="Profile"
           className="w-32 h-32 rounded-full object-cover"
+
+
         />
 
         {/* Text Section */}
