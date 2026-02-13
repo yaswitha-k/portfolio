@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 54% 7%;
+    --foreground: 220 14% 96%;
+
+    --card: 221 39% 11%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 221 39% 11%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 14% 96%;
+
+    --secondary: 258 90% 66%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 221 39% 16%;
+    --muted-foreground: 218 11% 65%;
+
+    --accent: 188 85% 53%;
+    --accent-foreground: 224 54% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 220 14% 96%;
+
+    --border: 221 39% 18%;
+    --input: 221 39% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    --glass: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-hover: 0 0% 100% / 0.1;
+
+    --sidebar-background: 224 54% 7%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 220 14% 96%;
+    --sidebar-accent: 221 39% 16%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 221 39% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsla(var(--glass));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsla(var(--glass-border));
+  }
+
+  .glass-hover:hover {
+    background: hsla(var(--glass-hover));
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsla(var(--primary) / 0.3);
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 20px hsla(var(--secondary) / 0.3);
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
